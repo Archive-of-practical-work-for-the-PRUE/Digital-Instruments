@@ -31,6 +31,32 @@ if (contactForm) {
     });
 }
 
+// Phone input validation - allow only digits
+const phoneInput = document.getElementById('phone');
+if (phoneInput) {
+    phoneInput.addEventListener('keypress', function (e) {
+        // Разрешаем только цифры и специальные клавиши (backspace, tab, enter, etc.)
+        if (!/[0-9]/.test(e.key) &&
+            e.key !== 'Backspace' &&
+            e.key !== 'Delete' &&
+            e.key !== 'Tab' &&
+            e.key !== 'Enter' &&
+            e.key !== 'ArrowLeft' &&
+            e.key !== 'ArrowRight' &&
+            e.key !== 'ArrowUp' &&
+            e.key !== 'ArrowDown') {
+            e.preventDefault();
+        }
+    });
+
+    phoneInput.addEventListener('paste', function (e) {
+        // При вставке проверяем содержимое
+        setTimeout(() => {
+            this.value = this.value.replace(/[^0-9]/g, '');
+        }, 10);
+    });
+}
+
 // Animate statistics numbers on scroll
 const stats = document.querySelectorAll('.stat-number');
 const observerOptions = {
@@ -64,27 +90,3 @@ function animateValue(element, start, end, duration) {
     };
     window.requestAnimationFrame(step);
 }
-
-// Header scroll effect
-const header = document.querySelector('.header');
-let lastScroll = 0;
-
-window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-
-    if (currentScroll <= 0) {
-        header.classList.remove('scroll-up');
-        return;
-    }
-
-    if (currentScroll > lastScroll && !header.classList.contains('scroll-down')) {
-        // Scroll Down
-        header.classList.remove('scroll-up');
-        header.classList.add('scroll-down');
-    } else if (currentScroll < lastScroll && header.classList.contains('scroll-down')) {
-        // Scroll Up
-        header.classList.remove('scroll-down');
-        header.classList.add('scroll-up');
-    }
-    lastScroll = currentScroll;
-}); 

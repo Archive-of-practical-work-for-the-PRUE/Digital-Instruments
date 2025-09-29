@@ -19,18 +19,19 @@
       <nav class="nav">
         <div class="logo">
           <i class="fab fa-python"></i>
-          <span>PythonPro</span>
+          <span class="logo-text"><a href="#hero">PythonPro</a></span>
         </div>
         <div class="nav-links">
           <a href="#benefits">Преимущества</a>
           <a href="#proof">Результаты</a>
+          <a href="#teachers">Преподаватели</a>
           <a href="#contact">Записаться</a>
         </div>
       </nav>
     </header>
 
     <main>
-      <section class="hero">
+      <section id="hero" class="hero">
         <div class="hero-content">
           <span class="hero-badge">Новый набор открыт!</span>
           <h1>Стань профессиональным Python-разработчиком</h1>
@@ -92,11 +93,11 @@
         <div class="proof-container">
           <div class="statistics">
             <div class="stat-item">
-              <span class="stat-number">85%</span>
+              <span class="stat-number">67%</span>
               <span class="stat-text">Трудоустройство</span>
             </div>
             <div class="stat-item">
-              <span class="stat-number">500+</span>
+              <span class="stat-number">24+</span>
               <span class="stat-text">Выпускников</span>
             </div>
             <div class="stat-item">
@@ -149,6 +150,33 @@
         </div>
       </section>
 
+      <section id="teachers" class="teachers">
+        <h2>Наши преподаватели</h2>
+        <div class="teachers-grid">
+          <div class="teacher-card">
+            <div class="teacher-info">
+              <h3><a href="https://merrcurys.ru" target="_blank">Александр Себежко</a></h3>
+              <p class="teacher-title">Senior Python Developer</p>
+              <p class="teacher-description">
+                Эксперт в области веб-разработки и асинхронного программирования.
+                Более 5 лет опыта в коммерческой разработке.
+              </p>
+            </div>
+          </div>
+          
+          <div class="teacher-card">
+            <div class="teacher-info">
+              <h3>Илья Безридный</h3>
+              <p class="teacher-title">Data Science Specialist</p>
+              <p class="teacher-description">
+                Специалист в области машинного обучения и анализа данных.
+                Автор нескольких научных публикаций в международных журналах.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="contact" class="contact">
         <h2>Начните обучение сегодня</h2>
         <div class="contact-container">
@@ -192,7 +220,16 @@
                 name="phone"
                 required
                 placeholder="Ваш телефон"
+                pattern="[0-9]{10,15}"
+                title="Пожалуйста, введите номер телефона (только цифры, от 10 до 15 символов)"
               />
+            </div>
+            <div class="form-group">
+              <label class="checkbox-container">
+                <input type="checkbox" id="consent" name="consent" required />
+                <span class="checkmark"></span>
+                Я согласен с <a href="privacy.html" target="_blank">обработкой персональных данных</a>
+              </label>
             </div>
             <button type="submit" class="submit-button">
               Забронировать место
@@ -210,8 +247,9 @@
         <div class="footer-section">
           <div class="footer-logo">
             <i class="fab fa-python"></i>
-            <span>PythonPro</span>
+            <span class="logo-text"><a href="#hero">PythonPro</a></span>
           </div>
+          <a href="privacy.html" target="_blank">Политика обработки персональных данных</a>
           <p>Ваш путь к успешной карьере в IT</p>
           <p>
             Мы помогаем начинающим разработчикам освоить Python и получить
@@ -239,7 +277,6 @@
           <div class="social-links">
             <a href="#" title="Telegram"><i class="fab fa-telegram"></i></a>
             <a href="#" title="ВКонтакте"><i class="fab fa-vk"></i></a>
-            <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
             <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
           </div>
           <p>
@@ -249,7 +286,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2024 PythonPro. Все права защищены.</p>
+        <p>&copy; 2025 PythonPro. Все права защищены.</p>
       </div>
     </footer>
 
