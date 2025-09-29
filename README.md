@@ -2,7 +2,7 @@
 
 Разработан лендинг по предмету Цифровые инструменты и сервисы для решения профессиональных задач. Лендинг для курса по Python-разработке, созданный с использованием современных веб-технологий. Сайт имеет современный дизайн и оптимизирован для конверсии, а также по новым законам есть политика обработки данных.
 
-Посмотреть сайт можно [здесь.](https://archive-of-practical-work-for-the-mpt.github.io/Marketing/)
+Посмотреть сайт можно [здесь.](https://archive-of-practical-work-for-the-prue.github.io/Digital-Instruments)
 
 ![image](https://github.com/user-attachments/assets/4774c1ce-e524-43a6-8243-d704befb8d4b)
 
